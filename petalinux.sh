@@ -7,3 +7,5 @@ sudo apt install -y gawk wget git diffstat unzip texinfo gcc g++ build-essential
   libncurses5-dev libssl-dev bc rsync lsb-release
 sudo locale-gen en_US.UTF-8
 sudo ln -sf bash /bin/sh    # PetaLinux requires /bin/sh -> bash
+chmod +x ./petalinux-v2025.1-final-installer.run
+./petalinux-v2025.1-final-installer.run --dir /home/kheph/petalinux/2025.1
