@@ -8,9 +8,21 @@ ECE-490-Real-Time Video Inference on FPGA Hardware: A Bandwidth-Aware CNN Pipeli
 - Clone this repo inside the folder
 - run install_vitis_ai.sh
 - run docker pull xilinx/vitis-ai:2.5
-- build the development container: docker build -f vivado-2022.1-ubuntu20.04.df -t vivado-2022.1-ubuntu20.04 .
+- Follow remaining steps from
+  - https://docs.amd.com/r/2.5-English/ug1414-vitis-ai/DPU-Naming
 - download the AMD unified installer version 2022.1 
 -   https://www.amd.com/en/support/downloads/adaptive-socs-and-fpgas/development-tools/2022-1.html
-- update the filepath in run_dev.sh to the one for your vivado / vitis install
-- run the container using run_dev.sh
-- run the installer from inside the container and install vitis, vivado, and kria kv260 board support
+
+**Using the tools**
+Start vitis AI docker container
+1. cd into Vitis_AI folder
+2. ./docker_run.sh
+Enable Cross compilation
+1. cd Vitis-AI/setup/mpsoc
+./host_cross_compiler_setup.sh
+2. source ~/petalinux_sdk_2022.1/environment-setup-cortexa72-cortexa53-xilinx-linux
+
+**Development notes**
+- the project was setup using the Vivado TRD Flow for AMD DPU integration discussed here
+https://docs.amd.com/r/2.5-English/ug1414-vitis-ai/Integrating-the-DPU-into-Custom-Platforms
+https://docs.amd.com/r/en-US/pg338-dpu/Add-the-DPUCZDX8G-into-Repository-or-Upgrade-the-DPUCZDX8G-from-a-Previous-Version
