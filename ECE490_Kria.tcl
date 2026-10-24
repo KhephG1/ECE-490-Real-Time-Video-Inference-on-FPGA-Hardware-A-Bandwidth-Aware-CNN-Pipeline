@@ -212,11 +212,13 @@ proc create_root_design { parentCell } {
   # Create instance: dpuczdx8g_0, and set properties
   set dpuczdx8g_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:dpuczdx8g:4.0 dpuczdx8g_0 ]
   set_property -dict [list \
+    CONFIG.ARCH {2304} \
     CONFIG.TIME_DAY {24} \
-    CONFIG.TIME_HOUR {14} \
+    CONFIG.TIME_HOUR {15} \
     CONFIG.TIME_MONTH {10} \
     CONFIG.TIME_QUARTER {1} \
     CONFIG.TIME_YEAR {26} \
+    CONFIG.URAM_N_USER {60} \
   ] $dpuczdx8g_0
 
 
